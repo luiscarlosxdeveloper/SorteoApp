@@ -23,6 +23,33 @@ body {
     overflow: hidden;
 }
 
+/* Ad sections */
+.ads-section {
+    padding: 20px 30px;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fff;
+}
+
+.ads-slot {
+    min-height: 120px;
+    border: 2px dashed rgba(102, 126, 234, 0.4);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(102, 126, 234, 0.08);
+    text-align: center;
+}
+
+.ads-slot__label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #6c63ff;
+}
+
 /* Header */
 header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
