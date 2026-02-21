@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Sorteo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>🎉 Aplicación de Sorteo</h1>
+            <p>Añade correos electrónicos y elige un ganador al azar</p>
+        </header>
+
+        <section class="form-section">
+            <form id="emailForm" class="email-form">
+                <div class="form-group">
+                    <label for="emailInput">Correo electrónico:</label>
+                    <input 
+                        type="email" 
+                        id="emailInput" 
+                        placeholder="ejemplo@correo.com" 
+                        required
+                        autocomplete="email"
+                    >
+                    <button type="submit" class="btn btn-primary">
+                        Agregar
+                    </button>
+                </div>
+                <div id="message" class="message" role="alert" aria-live="polite"></div>
+            </form>
+        </section>
+
+        <section class="participants-section">
+            <h2>Participantes (<span id="participantCount">0</span>)</h2>
+            <div class="participants-container">
+                <ul id="participantsList" class="participants-list"></ul>
+                <div id="emptyState" class="empty-state">
+                    <p>No hay participantes aún. Añade correos para comenzar.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="raffle-section">
+            <button 
+                id="raffleButton" 
+                class="btn btn-raffle" 
+                disabled
+            >
+                🎲 Elegir ganador
+            </button>
+            
+            <div id="winnerSection" class="winner-section hidden">
+                <h2>🏆 ¡Ganador!</h2>
+                <div class="winner-card">
+                    <div class="winner-email" id="winnerEmail"></div>
+                    <div class="winner-actions">
+                        <button id="newRaffleButton" class="btn btn-secondary">
+                            🔄 Nuevo sorteo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
